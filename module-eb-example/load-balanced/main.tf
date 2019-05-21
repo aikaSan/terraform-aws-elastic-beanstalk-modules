@@ -1,9 +1,8 @@
 module "prod-eb-template" {
     source = "../eb-module"
 
-    env_name               = "prod-environment"
+    env_name               = "load-balanced-webserver-app"
     app_name               = "MySampleApp"
-    env_tier               = "WebServer"
     stack_name             = "64bit Amazon Linux 2018.03 v2.8.9 running PHP 7.2"
 
     min_size               = "1"

@@ -1,10 +1,10 @@
 ###############################
 #   EB Configuration
 ###############################
-resource "aws_elastic_beanstalk_environment" "prod" {
+resource "aws_elastic_beanstalk_environment" "load-balanced-app" {
   name                = "${var.env_name}"
   application         = "${var.app_name}"
-  tier                = "${var.env_tier}"
+  tier                = "WebServer"
   solution_stack_name = "${var.stack_name}"
 
 ###############################

@@ -5,4 +5,4 @@ Default EB Roles have been applied.
 
 ## Folders
 
-prod - Load Balanced Environment.
+load-balanced -> Load Balanced Environment. Works only with WebServer options.

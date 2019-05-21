@@ -11,10 +11,6 @@ variable "app_name" {
   description = "Name of the Application that the environment will be deployed."
 }
 
-variable "env_tier" {
-  description = "Worker or Web Server."
-}
-
 variable "stack_name" {
   description = "Solution stack of the environment (e.g. 64bit Amazon Linux 2018.03 v2.8.9 running PHP 7.2)."
 }
