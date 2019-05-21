@@ -31,8 +31,4 @@ module "prod-eb-template" {
     vpc_id                 = "${data.aws_vpc.selected.id}"
     cert_arn               = "${var.cert_arn}"
 
-    access_key             = "${var.access_key}"
-    secret_key             = "${var.secret_key}"
-    region                 = "${var.region}"
-
 }

@@ -1,7 +1,3 @@
-variable "access_key" {}
-variable "secret_key" {}
-variable "region" {}
-
 variable "vpc_id" {}
 data "aws_vpc" "selected" {
   id = "${var.vpc_id}"
