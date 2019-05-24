@@ -3,12 +3,14 @@ module "prod-eb-template" {
 
     env_name               = "load-balanced-webserver-app"
     app_name               = "MySampleApp"
+    env_tier               = "WebServer" 
     stack_name             = "64bit Amazon Linux 2018.03 v2.8.9 running PHP 7.2"
 
     min_size               = "1"
     max_size               = "2"
     listener_protocol      = "HTTPS"
     instance_port          = "443"
+    instance_protocol      = "HTTPS"
 
     instance_type          = "t1.micro"
 

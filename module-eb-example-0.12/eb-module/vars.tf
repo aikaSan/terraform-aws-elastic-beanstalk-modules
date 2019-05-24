@@ -19,36 +19,32 @@ variable "stack_name" {
   description = "Solution stack of the environment (e.g. 64bit Amazon Linux 2018.03 v2.8.9 running PHP 7.2)."
 }
 
-variable "min_size" {
-  description = "The minimum number of EC2 Instances in the ASG."
-}
-
-variable "max_size" {
-  description = "The maximum number of EC2 Instances in the ASG."
-}
-
-variable "listener_protocol" {
-  description = "Values for the protocol of the Load Balancer (HTTP, HTTPS, TCP or SSL)."
-}
-
 variable "instance_port" {
   description = "The port that this listener uses to communicate with the EC2 instances."
 }
 
-variable "instance_protocol" {
-  description = "The protocol that this listener uses to communicate with the EC2 instances."
+variable "env_conf" {
+  type = map(string)
 }
 
-variable "cert_arn" {
-  description = "ARN of an SSL certificate to bind to the listener."
+
+variable "asg" {
+  type = map(string)
 }
 
-variable "instance_type" {
-  description = "The type of EC2 Instances to run (e.g. t2.micro)."
+variable "elb_listener" {
+  type = map(string)
 }
-variable "ec2_keyname" {
-  description = "Key pair to login into EC2 Instances."
+
+variable "launch_config" {
+    type = map(string)
 }
+
+variable "vpc_conf" {
+    type = map(string)
+}
+
+/*
 
 variable "email" {
   description = "Email that will be in the sns topic automatically created by EB (Monitoring purpose)."
@@ -91,3 +87,4 @@ variable "associate_public_ip" {
   description = "Specifies whether to launch instances with public IP addresses in your Amazon VPC."
 }
 
+*/

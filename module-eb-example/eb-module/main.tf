@@ -4,7 +4,7 @@
 resource "aws_elastic_beanstalk_environment" "load-balanced-app" {
   name                = "${var.env_name}"
   application         = "${var.app_name}"
-  tier                = "WebServer"
+  tier                = "${var.env_tier}"
   solution_stack_name = "${var.stack_name}"
 
 ###############################
@@ -44,7 +44,7 @@ resource "aws_elastic_beanstalk_environment" "load-balanced-app" {
   setting = {
     namespace = "aws:elb:listener:${var.instance_port}"
     name      = "InstanceProtocol"
-    value     = "HTTP"
+    value     = "${var.instance_protocol}"
   }
 
   setting = {
